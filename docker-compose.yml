@@ -11,6 +11,7 @@ services:
       - ./data/git:/var/opt/gitlab
     environment:
       - GITLAB_OMNIBUS_CONFIG=${GITLAB_OMNIBUS_CONFIG}
+    network_mode: host
     ports:
       - 1022:22
       - 8080:80
